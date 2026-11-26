@@ -1,0 +1,24 @@
+import SignedSearch
+
+namespace Lower100268
+open TwoLit100268
+set_option maxRecDepth 16000
+set_option maxHeartbeats 8500000
+
+def sS375 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000ffffff000, 0xde8de8de8de8de8de8de8de8de8), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffffffffffffffff000000fff, 0x203a03a03a03a03a03a03a03a03a)]
+theorem qS375 : Impossible 7 1 sS375 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS098 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffff000, 0x1fc5fc5fc5fc5fc5fc5fc5fc5fc5), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007)]
+theorem qS098 : Impossible 7 1 sS098 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS409 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000000000000000000000000, 0x0), (0xffffff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS409 : Impossible 7 1 sS409 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS020 : List Sig := [(0x0, 0x20020020020020020020020020), (0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffffffffffffffff000000fff, 0x203a03a03a03a03a03a03a03a03a)]
+theorem qS020 : Impossible 7 1 sS020 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+end Lower100268

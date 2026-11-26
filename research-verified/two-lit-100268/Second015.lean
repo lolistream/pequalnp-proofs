@@ -1,0 +1,20 @@
+import SignedSearch
+
+namespace Lower100268
+open TwoLit100268
+set_option maxRecDepth 16000
+set_option maxHeartbeats 8500000
+
+def sS354 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030), (0x3ffffffffffff000000fffffffff, 0x37c77c77c77c77c77c77c77c77c7)]
+theorem qS354 : Impossible 7 1 sS354 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS541 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000000000000000000000000, 0x0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffffffffffffffff000000fff, 0x203a03a03a03a03a03a03a03a03a)]
+theorem qS541 : Impossible 7 2 sS541 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS200 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000000000000000000000000, 0x4004004004004004004004004), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS200 : Impossible 7 1 sS200 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+end Lower100268

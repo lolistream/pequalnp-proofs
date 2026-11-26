@@ -37,6 +37,8 @@ A short reason for the obstruction: all six inputs affect the answer. Connecting
 
 For `L-meta-23222` (mask `35895` on the same six wires), the exact minimum is also **7 gates**. The [seven-gate witness](two-lit/seven-35895.lean) and the [impossibility of six or fewer](two-lit/no-six-35895.lean) were checked separately by Lean. This is not just a failed formula search: the lower theorem includes arbitrary permitted AND/OR/NOT circuits with sharing. Here input 3 can change the output in both directions: adding it to `{2}` changes false to true, whereas adding it to `{0}` changes true to false. All six inputs are essential, so at size six there would be only five binary gates and one NOT, making the output cone a read-once tree. Such a tree cannot have both polarities for input 3.
 
+For `L-meta-24746` (mask `100268`), the exact minimum is **10 gates, not 9**. The [10-gate witness](two-lit-100268/ten-100268.lean) is verified on all 36 ordered inputs, and the [two-layer signed cut certificate](two-lit-100268/README.md) rules out all nine-gate circuits, with sharing and NOT gates allowed. Its kernel-checked axiom audit reports only `propext`, `Classical.choice` and `Quot.sound`.
+
 ## Search ranges: 3×3 Boolean matrix product
 
 - [Range 4: at most eleven ANDs, exactly one NOT](matrix-range4/README.md). A restriction reduces a hypothetical witness to two dot products on nine inputs. All five placements of NOT in the relaxed problem have checked UNSAT certificates. The desk acknowledged `exhausted` for range 4. This is not a Lean proof that no 44-gate circuit exists in every range.

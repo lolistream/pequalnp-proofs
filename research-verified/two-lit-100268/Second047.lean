@@ -1,0 +1,40 @@
+import SignedSearch
+
+namespace Lower100268
+open TwoLit100268
+set_option maxRecDepth 16000
+set_option maxHeartbeats 8500000
+
+def sS183 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000000000000000000000000, 0x0), (0x3000000000000000000000000fff, 0x0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS183 : Impossible 7 1 sS183 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS190 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000000000000000000000000, 0x0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000000000fffffffff, 0x1ff5ff5ff5ff5ff5ff5ff5ff5ff5), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS190 : Impossible 7 1 sS190 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS231 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0xffffffffffffffffff000000000, 0xff8ff8ff8ff8ff8ff8ff8ff8ff8), (0x3ffffff000000fff000fff000fff, 0xd38d38d38d38d38d38d38d38d38)]
+theorem qS231 : Impossible 7 1 sS231 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS353 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3fff000fffffffffffffffffffff, 0x368f68f68f68f68f68f68f68f68f), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS353 : Impossible 7 1 sS353 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS441 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xfffffffffffffff000000, 0x2d2ad2ad2ad2ad2ad2ad2ad2ad2a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0xffffffffffffffffff000000000, 0xff8ff8ff8ff8ff8ff8ff8ff8ff8), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS441 : Impossible 7 1 sS441 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS499 : List Sig := [(0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000ffffff000, 0xde8de8de8de8de8de8de8de8de8), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0xffffffffffffffffff000000000, 0xff8ff8ff8ff8ff8ff8ff8ff8ff8), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS499 : Impossible 7 1 sS499 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS201 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000000000000000000000000, 0x4004004004004004004004004), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030), (0x3ffffff000000fff000fffffffff, 0x3037037037037037037037037037)]
+theorem qS201 : Impossible 7 1 sS201 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS266 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffffffffffffffff000000fff, 0x203a03a03a03a03a03a03a03a03a), (0x3ffffffffffffffffff000ffffff, 0x21fa1fa1fa1fa1fa1fa1fa1fa1fa)]
+theorem qS266 : Impossible 7 1 sS266 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+end Lower100268

@@ -1,0 +1,56 @@
+import SignedSearch
+
+namespace Lower100268
+open TwoLit100268
+set_option maxRecDepth 16000
+set_option maxHeartbeats 8500000
+
+def sS252 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030), (0x3ffffff000ffffff000fffffffff, 0x31f71f71f71f71f71f71f71f71f7)]
+theorem qS252 : Impossible 7 1 sS252 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS291 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000fff000000, 0xfacfacfacfacfacfacfacfacfac), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030), (0x3fffffffff000fff000fff000fff, 0xfbcfbcfbcfbcfbcfbcfbcfbcfbc)]
+theorem qS291 : Impossible 7 1 sS291 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS469 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3000000fffffffffffffffffffff, 0x300f00f00f00f00f00f00f00f00f), (0x3000000fffffffffffffffffffff, 0x3d2fd2fd2fd2fd2fd2fd2fd2fd2f), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS469 : Impossible 7 1 sS469 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS514 : List Sig := [(0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0xfff000fff000000000fff000000, 0xfacfacfacfacfacfacfacfacfac), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030), (0x3ffffffffffffffffff000000fff, 0x203a03a03a03a03a03a03a03a03a)]
+theorem qS514 : Impossible 7 1 sS514 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS254 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000000000000, 0x684684684684684684684684684), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030), (0x3ffffffffffffffffff000000fff, 0x26be6be6be6be6be6be6be6be6be)]
+theorem qS254 : Impossible 7 1 sS254 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS281 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000fff000000, 0xfacfacfacfacfacfacfacfacfac), (0xffffffffffff000000ffffff000, 0xfecfecfecfecfecfecfecfecfec), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS281 : Impossible 7 1 sS281 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS287 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000fff000000000fff000000, 0xfacfacfacfacfacfacfacfacfac), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3fff000fff000000000fffffffff, 0x3faffaffaffaffaffaffaffaffaf), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS287 : Impossible 7 1 sS287 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS298 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xfff000ffffffffffff000000000, 0x268e68e68e68e68e68e68e68e68e), (0xffffffffffffffffff000fff000, 0x27ce7ce7ce7ce7ce7ce7ce7ce7ce), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS298 : Impossible 7 1 sS298 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS315 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0xffffffffffff000000000fff000, 0x7c47c47c47c47c47c47c47c47c4), (0xffffffffffff000000ffffff000, 0xfecfecfecfecfecfecfecfecfec), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS315 : Impossible 7 1 sS315 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS342 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3fff000fff000000000fffffffff, 0x3687687687687687687687687687), (0x3fff000fff000000000fffffffff, 0x3faffaffaffaffaffaffaffaffaf), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS342 : Impossible 7 1 sS342 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS343 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3fff000fff000000000fffffffff, 0x3687687687687687687687687687), (0x3fff000fffffffffffffffffffff, 0x368f68f68f68f68f68f68f68f68f), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030)]
+theorem qS343 : Impossible 7 1 sS343 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sS347 : List Sig := [(0xfff000000, 0xd28d28d28d28d28d28d28d28d28), (0xffffffffffff000000000, 0x200a00a00a00a00a00a00a00a00a), (0xfff000fff000000000fff000, 0x1c01c01c01c01c01c01c01c01c0), (0x3000000000000000000fffffffff, 0x3007007007007007007007007007), (0x3fff000fff000000000fffffffff, 0x3687687687687687687687687687), (0x3ffffff000000fff000000000fff, 0x30030030030030030030030030), (0x3fffffffff000fff000fffffffff, 0x36b76b76b76b76b76b76b76b76b7)]
+theorem qS347 : Impossible 7 1 sS347 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+end Lower100268
