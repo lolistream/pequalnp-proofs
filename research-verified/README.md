@@ -13,6 +13,7 @@ Input `(u,v)` has one set bit on each side. For a graph with `m` columns, bit `m
 | L-meta-20498 | 3×5 | 3239 | **6**, not 5 | [6-gate witness](finite-graphs/six-3239.lean) | [no circuit of size ≤5](finite-graphs/no-five-3239.lean) |
 | L-meta-20743 | 5×5 | 24608768 | **7**, not 6 | [7-gate witness](finite-graphs/seven-24608768.lean) | [no circuit of size ≤6](finite-graphs/no-six-24608768.lean) |
 | L-meta-21075 | 4×5 | 106399 | **10**, not 9 | [10-gate witness](finite-graphs/ten-106399.lean) | [no circuit of size ≤9](finite-graphs/no-nine-106399.lean) |
+| L-meta-21813 | 4×6 | 275263 | **8**, not 7 | [8-gate witness](finite-graphs/eight-275263.lean) | [no circuit of size ≤7](finite-graphs/no-seven-275263.lean) |
 
 Each minimum in the table has both sides checked by the Lean 4.36.0 kernel. The lower-bound files specialize the finite-word completeness argument and checker from upstream [`L_meta_5473.lean`](../lean/PEqualNP/Outside/L_meta_5473.lean), under the repository’s Apache-2.0 license. The original tasks asked for the opposite inequalities. The results here refute those inequalities; they are **not** upstream PRs claiming to prove them.
 
