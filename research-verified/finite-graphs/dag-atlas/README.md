@@ -25,7 +25,8 @@ Compared with the [formula-tree atlas](../formula-atlas), sharing a computed wir
 - **Witnesses and coverage:** [`check.py`](check.py) evaluates every witness on all 15 inputs after each of the 720 row/column permutations. It checks that the orbits have the claimed sizes, are disjoint, and together cover every mask. Relabeling raw input wires preserves size in both directions (use the inverse permutation); fanout is unchanged. The table covers all masks, not only examples sampled from the project's queue.
 - **Lower bounds:** the [C++ checker](frontier.cc) and a [separate Python implementation](audit_lowers.py) searched for a smaller circuit for **every representative**, not only cases where the tree and circuit bounds differ. Neither trusts the supplied formula sizes when replaying the lower bounds. The full Python audit reported 190 classes, 40,338 input supports, 540,016 visited states, and zero counterexamples. A time-limited or partial C++ run does not pass the verifier.
 - **Lean, universal bound:** [`SharpBound.lean`](SharpBound.lean) proves `PEqualNP.Rep35Atlas.sharp_uniform_bound`: for any natural `s`, `(∀ A : Fin 3 → Fin 5 → Bool, RepSizeAtMost A s) ↔ 9 ≤ s`. This is a theorem about **every labeled relation**, not just about the entries in a finite list. [`RepresentativeUpperBounds.lean`](RepresentativeUpperBounds.lean) certifies all 190 circuits. [`RepresentativeOrbitCoverage.lean`](RepresentativeOrbitCoverage.lean) proves that every Boolean matrix is a relabeling of some listed mask, using the 792 possible sorted multisets of column types. [`RepSizePerm.lean`](RepSizePerm.lean) proves that row and column permutations preserve the minimum size (for arbitrary dimensions). [`WorstCase.lean`](WorstCase.lean) proves the matching obstruction for mask **7549** by specializing the finite-word argument from upstream `PEqualNP.Outside.L_meta_5473`. The kernel-checked sharp theorem depends only on the standard Lean axioms `propext`, `Classical.choice`, and `Quot.sound`.
-- **Distinction:** the kernel theorem certifies that the worst-case minimum is nine. It does not count the 7,770 extremal labeled relations or by itself prove every individual lower bound; those facts are verified by the independent searches above.
+- **Lean, individual optima:** [`SelectedOptima.lean`](SelectedOptima.lean) proves both directions for **104 distinct representatives**: a circuit for that matrix fits budget `s` if and only if `s` is at least its recorded minimum. The theorem also applies to every independent row/column relabeling. Enumerating the permutations of those 104 masks gives **9,218 distinct labeled relations**. [`RepresentativeLowerBounds.lean`](RepresentativeLowerBounds.lean) provides one shared soundness proof and 101 concrete lower bounds. The combined theorem includes three further representatives (1091, 3239, 7549), matches them all with the existing upper witnesses, and checks that the 104 mask keys do not repeat.
+- **Distinction:** the uniform nine-gate theorem covers all 32,768 relations. The separate per-class Lean theorem certifies exact minima for the selected 104 classes, not all 190. For the remaining 86 classes the upper witnesses are Lean-checked and the recorded minima are supported by the two exhaustive computational checks. The count of 7,770 extremal labeled relations is a result of the full computation.
 
 ## Why the exhaustive lower-bound search is complete
 
@@ -46,11 +47,12 @@ g++ -O3 -std=c++17 -ftrapv -D_GLIBCXX_ASSERTIONS frontier.cc -o "$work/frontier"
 python3 -I check.py --frontier "$work/frontier" --seconds 40
 ```
 
-To reproduce the universal theorem, from the repository's `lean/` directory using the pinned Lean and Mathlib versions:
+To reproduce either Lean theorem, from the repository's `lean/` directory using the pinned Lean and Mathlib versions:
 
 ```bash
 lake build PEqualNP.Defs
-bash ../research-verified/finite-graphs/dag-atlas/check-lean.sh
+bash ../research-verified/finite-graphs/dag-atlas/check-lean.sh          # universal sharp bound
+bash ../research-verified/finite-graphs/dag-atlas/check-lean.sh selected # 104 individual optima
 ```
 
-The script compiles all five proof modules in a fresh temporary directory, without installing them into the project's Lake build. Allow several minutes for the finite `decide` checks. On success the last line is `Lean OK: SharpBound`.
+Each invocation builds its five proof modules in a fresh temporary directory without installing them into the project's Lake build. Allow several minutes for the finite `decide` checks. The final line is `Lean OK: SharpBound` or `Lean OK: SelectedOptima`, respectively.
