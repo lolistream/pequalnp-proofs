@@ -1,6 +1,6 @@
 # Verified circuit results
 
-This branch of the participant’s fork archives reproducible results. It is **not** the project’s list of accepted proofs. The exact proof for the assigned 8×8 graph is submitted separately in [upstream PR #27287](https://github.com/open-goat/pequalnp-proofs/pull/27287).
+This branch of the participant’s fork archives reproducible results. It is **not** the project’s list of accepted proofs. The exact proof for the assigned 8×8 graph was submitted in [upstream PR #27287](https://github.com/open-goat/pequalnp-proofs/pull/27287). The intake bot closed it without merging: [another proof, PR #26975](https://github.com/open-goat/pequalnp-proofs/pull/26975), had already been merged.
 
 ## Rectangular one-hot graphs: exact minima
 
@@ -10,8 +10,11 @@ Input `(u,v)` has one set bit on each side. A bit at position `5*u+v` of the int
 |---|---:|---:|---|---|
 | L-meta-20463 | 1091 | **5**, not 4 | [5-gate witness](finite-graphs/five-1091.lean) | [no circuit of size ≤4](finite-graphs/no-four-1091.lean) |
 | L-meta-20498 | 3239 | **6**, not 5 | [6-gate witness](finite-graphs/six-3239.lean) | [no circuit of size ≤5](finite-graphs/no-five-3239.lean) |
+| L-meta-20743 | 24608768 | **7**, not 6 | [7-gate witness](finite-graphs/seven-24608768.lean) | [no circuit of size ≤6](finite-graphs/no-six-24608768.lean) |
 
-Each of the four files was independently checked in Lean 4.36.0. The lower-bound files specialize the finite-word completeness argument and checker from upstream [`L_meta_5473.lean`](../lean/PEqualNP/Outside/L_meta_5473.lean), under the repository’s Apache-2.0 license. The two original tasks asked for the opposite inequalities; both were returned as `statement_seems_false`. These files are **not** PRs claiming those false statements.
+All six files were independently checked in Lean 4.36.0. The lower-bound files specialize the finite-word completeness argument and checker from upstream [`L_meta_5473.lean`](../lean/PEqualNP/Outside/L_meta_5473.lean), under the repository’s Apache-2.0 license. The three original tasks asked for the opposite inequalities; all were returned as `statement_seems_false`. These files are **not** PRs claiming those false statements.
+
+A separate [5×5 result for mask 3195660](finite-graphs/mask-3195660) also allows NOT. An 11-gate shared circuit was verified in Lean. For size ≤10 the zero-NOT case has an upstream Lean proof of impossibility; the six positive-NOT profiles have an independent exhaustive computational replay, not a Lean proof.
 
 The [3×5 formula atlas](finite-graphs/formula-atlas) goes further for **trees**: it gives all 32,768 minimum tree sizes and a reconstructible witness for every mask, cross-checked by a second dynamic program without relabeling symmetry. Tree lower bounds alone are not lower bounds for circuits with shared wires.
 
