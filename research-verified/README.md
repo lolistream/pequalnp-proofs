@@ -14,10 +14,13 @@ Input `(u,v)` has one set bit on each side. For a graph with `m` columns, bit `m
 | L-meta-20743 | 5×5 | 24608768 | **7**, not 6 | [7-gate witness](finite-graphs/seven-24608768.lean) | [no circuit of size ≤6](finite-graphs/no-six-24608768.lean) |
 | L-meta-21075 | 4×5 | 106399 | **10**, not 9 | [10-gate witness](finite-graphs/ten-106399.lean) | [no circuit of size ≤9](finite-graphs/no-nine-106399.lean) |
 | L-meta-21813 | 4×6 | 275263 | **8**, not 7 | [8-gate witness](finite-graphs/eight-275263.lean) | [no circuit of size ≤7](finite-graphs/no-seven-275263.lean) |
+| L-meta-23522 | 4×6 | 1900283 | **11**, not 10 | [11-gate witness](finite-graphs/exact-1900283.lean#L556) | [exact budget theorem](finite-graphs/exact-1900283.lean#L566) |
 
 Each minimum in the table has both sides checked by the Lean 4.36.0 kernel. The lower-bound files specialize the finite-word completeness argument and checker from upstream [`L_meta_5473.lean`](../lean/PEqualNP/Outside/L_meta_5473.lean), under the repository’s Apache-2.0 license. The original tasks asked for the opposite inequalities. The results here refute those inequalities; they are **not** upstream PRs claiming to prove them.
 
 In the 4×5 example, deleting its all-true first row leaves the 3×5 mask 3324. The explicit 10-gate construction uses the first row bit directly and shares the `column 0 OR column 1` signal between the last two rows. The proof that nine gates cannot suffice covers **all** permitted circuits, not just circuits with this layout.
+
+For the 4×6 mask `1900283`, keep rows `{0,2,3}` and columns `{2,3,4}`. If the full graph had a 10-gate circuit, the [induced-subgraph inequality](../lean/PEqualNP/MetaComplexity/Helpers/RepInduced.lean) would give its five-edge restriction a circuit of at most 6 gates. Lean excludes that smaller circuit and checks an 11-gate witness for the original matrix. To replay this file, build `PEqualNP.MetaComplexity.Helpers.RepInduced` with Lake before checking `finite-graphs/exact-1900283.lean`.
 
 A separate [5×5 result for mask 3195660](finite-graphs/mask-3195660) also allows NOT. An 11-gate shared circuit was verified in Lean. For size ≤10 the zero-NOT case has an upstream Lean proof of impossibility; the six positive-NOT profiles have an independent exhaustive computational replay, not a Lean proof.
 
