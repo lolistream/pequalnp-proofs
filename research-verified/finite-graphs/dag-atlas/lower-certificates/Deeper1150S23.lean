@@ -1,0 +1,119 @@
+import AtlasCut
+
+namespace CutWords1150
+open AtlasLower AtlasMemo
+set_option maxRecDepth 14000
+set_option maxHeartbeats 9500000
+
+def s23 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+
+private def z23c0 : State := [0x408102040810200000000000000, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e0 : optimized 6 0 z23c0 = false := by decide +kernel
+
+private def z23c1 : State := [0x40810204081020003f800003f80, 0x810204081020400000000000000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e1 : optimized 6 0 z23c1 = false := by decide +kernel
+
+private def z23c2 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x8102040810204000000000000000, 0xa142850a1428500000000000007f]
+private theorem e2 : optimized 6 0 z23c2 = false := by decide +kernel
+
+private def z23c3 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xbf7efdfbf7efdf0000000000007f]
+private theorem e3 : optimized 6 0 z23c3 = false := by decide +kernel
+
+private def z23c4 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x850a142850a142fffffff0003f80, 0xa142850a1428500000000000007f]
+private theorem e4 : optimized 6 0 z23c4 = false := by decide +kernel
+
+private def z23c5 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x89122448912244fffffff01fc000, 0xa142850a1428500000000000007f]
+private theorem e5 : optimized 6 0 z23c5 = false := by decide +kernel
+
+private def z23c6 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0xa142850a1428500000000000007f, 0xc3870e1c3870e1fffffff0000000]
+private theorem e6 : optimized 6 0 z23c6 = false := by decide +kernel
+
+private def z23c7 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0xa142850a1428500000000000007f, 0xf1e3c78f1e3c78ffffffffffff80]
+private theorem e7 : optimized 6 0 z23c7 = false := by decide +kernel
+
+private def z23c8 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x74e9d3a74e9d3afe03f80fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e8 : optimized 6 0 z23c8 = false := by decide +kernel
+
+private def z23c9 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x78f1e3c78f1e3cfffc000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e9 : optimized 6 0 z23c9 = false := by decide +kernel
+
+private def z23c10 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f, 0xbf7efdfbf7efdf0000000000007f]
+private theorem e10 : optimized 6 0 z23c10 = false := by decide +kernel
+
+private def z23c11 : State := [0x40810204081020003f800003f80, 0x810204081020401fc00001fc000, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xbf7efdfbf7efdf0000000000007f]
+private theorem e11 : optimized 6 1 z23c11 = false := by decide +kernel
+
+private def z23c12 : State := [0x40810204081020003f800003f80, 0xc183060c1830601fff8001fff80, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e12 : optimized 6 0 z23c12 = false := by decide +kernel
+
+private def z23c13 : State := [0x40810204081020003f800003f80, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x4a952a54a952a501fc07f01fc000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e13 : optimized 6 0 z23c13 = false := by decide +kernel
+
+private def z23c14 : State := [0x40810204081020003f800003f80, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x78f1e3c78f1e3cfffc000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e14 : optimized 6 0 z23c14 = false := by decide +kernel
+
+private def z23c15 : State := [0x40810204081020003f800003f80, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0x89122448912244fffffff01fc000, 0xa142850a1428500000000000007f]
+private theorem e15 : optimized 6 0 z23c15 = false := by decide +kernel
+
+private def z23c16 : State := [0x40810204081020003f800003f80, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x89122448912244fffffff01fc000, 0xa142850a1428500000000000007f]
+private theorem e16 : optimized 6 1 z23c16 = false := by decide +kernel
+
+private def z23c17 : State := [0x40810204081020003f800003f80, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x78f1e3c78f1e3cfffc000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e17 : optimized 6 1 z23c17 = false := by decide +kernel
+
+private def z23c18 : State := [0x810204081020401fc00001fc000, 0xc183060c1830601fff8001fff80, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e18 : optimized 6 0 z23c18 = false := by decide +kernel
+
+private def z23c19 : State := [0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x468d1a3468d1a30003fff0003f80, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e19 : optimized 6 0 z23c19 = false := by decide +kernel
+
+private def z23c20 : State := [0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x74e9d3a74e9d3afe03f80fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e20 : optimized 6 0 z23c20 = false := by decide +kernel
+
+private def z23c21 : State := [0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0x850a142850a142fffffff0003f80, 0xa142850a1428500000000000007f]
+private theorem e21 : optimized 6 0 z23c21 = false := by decide +kernel
+
+private def z23c22 : State := [0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x850a142850a142fffffff0003f80, 0xa142850a1428500000000000007f]
+private theorem e22 : optimized 6 1 z23c22 = false := by decide +kernel
+
+private def z23c23 : State := [0x810204081020401fc00001fc000, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x74e9d3a74e9d3afe03f80fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e23 : optimized 6 1 z23c23 = false := by decide +kernel
+
+private def z23c24 : State := [0xc183060c1830601fff8001fff80, 0x1e3c78f1e3c78f0000000000007f, 0x42850a142850a1000007f0000000, 0x70e1c3870e1c38fe00000fffff80, 0x81020408102040fffffff0000000, 0xa142850a1428500000000000007f]
+private theorem e24 : optimized 6 1 z23c24 = false := by decide +kernel
+
+private def next : Layer := #[z23c0,z23c1,z23c2,z23c3,z23c4,z23c5,z23c6,z23c7,z23c8,z23c9,z23c10,z23c11,z23c12,z23c13,z23c14,z23c15,z23c16,z23c17,z23c18,z23c19,z23c20,z23c21,z23c22,z23c23,z23c24]
+private theorem afterStep : AtlasCut.Anchors 6 next := by
+  intro s mem nd
+  simp only [next, Array.mem_def, List.mem_cons, List.not_mem_nil, or_false] at mem
+  rcases mem with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  · exact AtlasCut.leaf e0 nd
+  · exact AtlasCut.leaf e1 nd
+  · exact AtlasCut.leaf e2 nd
+  · exact AtlasCut.leaf e3 nd
+  · exact AtlasCut.leaf e4 nd
+  · exact AtlasCut.leaf e5 nd
+  · exact AtlasCut.leaf e6 nd
+  · exact AtlasCut.leaf e7 nd
+  · exact AtlasCut.leaf e8 nd
+  · exact AtlasCut.leaf e9 nd
+  · exact AtlasCut.leaf e10 nd
+  · exact AtlasCut.leaf e11 nd
+  · exact AtlasCut.leaf e12 nd
+  · exact AtlasCut.leaf e13 nd
+  · exact AtlasCut.leaf e14 nd
+  · exact AtlasCut.leaf e15 nd
+  · exact AtlasCut.leaf e16 nd
+  · exact AtlasCut.leaf e17 nd
+  · exact AtlasCut.leaf e18 nd
+  · exact AtlasCut.leaf e19 nd
+  · exact AtlasCut.leaf e20 nd
+  · exact AtlasCut.leaf e21 nd
+  · exact AtlasCut.leaf e22 nd
+  · exact AtlasCut.leaf e23 nd
+  · exact AtlasCut.leaf e24 nd
+private theorem completeStep : (#[s23] : Layer).all (stateOK next 7) = true := by decide +kernel
+theorem node23 : s23.Nodup → ¬ live basicOps goal 7 s23.toFinset :=
+  (AtlasCut.step afterStep completeStep) s23 (by simp)
+
+end CutWords1150

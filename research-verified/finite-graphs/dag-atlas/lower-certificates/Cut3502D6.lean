@@ -1,0 +1,101 @@
+import AtlasCut
+
+namespace AtlasCutRow3502D6
+open AtlasLower AtlasMemo
+set_option maxRecDepth 12000
+set_option maxHeartbeats 8000000
+
+private def cols : List W := [0x70707070707070000000000ffff,0x38383838383838000000ffff0000,0xc0c0c0c0c0c0c0ffffff00000000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0xff0000ff00ff00]
+private def s6_0 : State := [0xff0000ff00ff00,0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x48484848484848000000000000ff,0xb9b9b9b9b9b9b9000000ffff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail0 : optimized 6 0 s6_0 = false := by decide +kernel
+private def s6_1 : State := [0xff0000ff00ff00,0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xe4e4e4e4e4e4e4ffffff00000000]
+private theorem tail1 : optimized 6 0 s6_1 = false := by decide +kernel
+private def s6_2 : State := [0xff0000ff00ff00,0x70707070707070000000000ffff,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xd2d2d2d2d2d2d2ffffff00000000]
+private theorem tail2 : optimized 6 0 s6_2 = false := by decide +kernel
+private def s6_3 : State := [0xff0000ff00ff00,0x70707070707070000000000ffff,0x3636363636363600ffff00000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail3 : optimized 6 0 s6_3 = false := by decide +kernel
+private def s6_4 : State := [0xff0000ff00ff00,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x4f4f4f4f4f4f4f0000000000ffff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail4 : optimized 6 0 s6_4 = false := by decide +kernel
+private def s6_5 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffffff00ff00]
+private theorem tail5 : optimized 6 0 s6_5 = false := by decide +kernel
+private def s6_6 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xd2d2d2d2d2d2d2ffffff00000000]
+private theorem tail6 : optimized 6 0 s6_6 = false := by decide +kernel
+private def s6_7 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xe4e4e4e4e4e4e4ffffff00000000]
+private theorem tail7 : optimized 6 0 s6_7 = false := by decide +kernel
+private def s6_8 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0xb9b9b9b9b9b9b9000000ffff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail8 : optimized 6 0 s6_8 = false := by decide +kernel
+private def s6_9 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x4f4f4f4f4f4f4f0000000000ffff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail9 : optimized 6 0 s6_9 = false := by decide +kernel
+private def s6_10 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838ff0000ffffff00,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail10 : optimized 6 0 s6_10 = false := by decide +kernel
+private def s6_11 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xb9b9b9b9b9b9b9000000ffff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail11 : optimized 6 0 s6_11 = false := by decide +kernel
+private def s6_12 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x48484848484848000000000000ff,0xb9b9b9b9b9b9b9000000ffff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail12 : optimized 6 1 s6_12 = false := by decide +kernel
+private def s6_13 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x3636363636363600ffff00000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail13 : optimized 6 0 s6_13 = false := by decide +kernel
+private def s6_14 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000,0xe4e4e4e4e4e4e4ffffff00000000]
+private theorem tail14 : optimized 6 0 s6_14 = false := by decide +kernel
+private def s6_15 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xe4e4e4e4e4e4e4ffffff00000000]
+private theorem tail15 : optimized 6 1 s6_15 = false := by decide +kernel
+private def s6_16 : State := [0x70707070707070000000000ffff,0x2424242424242400ff0000000000,0x3636363636363600ffff00000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail16 : optimized 6 0 s6_16 = false := by decide +kernel
+private def s6_17 : State := [0x70707070707070000000000ffff,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000,0xd2d2d2d2d2d2d2ffffff00000000]
+private theorem tail17 : optimized 6 0 s6_17 = false := by decide +kernel
+private def s6_18 : State := [0x70707070707070000000000ffff,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xd2d2d2d2d2d2d2ffffff00000000]
+private theorem tail18 : optimized 6 1 s6_18 = false := by decide +kernel
+private def s6_19 : State := [0x70707070707070000000000ffff,0x3636363636363600ffff00000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail19 : optimized 6 1 s6_19 = false := by decide +kernel
+private def s6_20 : State := [0x7070707070707ff0000ff00ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail20 : optimized 6 0 s6_20 = false := by decide +kernel
+private def s6_21 : State := [0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x4f4f4f4f4f4f4f0000000000ffff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail21 : optimized 6 0 s6_21 = false := by decide +kernel
+private def s6_22 : State := [0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x4f4f4f4f4f4f4f0000000000ffff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private theorem tail22 : optimized 6 1 s6_22 = false := by decide +kernel
+private def layer6 : Layer := #[s6_0,s6_1,s6_2,s6_3,s6_4,s6_5,s6_6,s6_7,s6_8,s6_9,s6_10,s6_11,s6_12,s6_13,s6_14,s6_15,s6_16,s6_17,s6_18,s6_19,s6_20,s6_21,s6_22]
+private def s7_0 : State := [0xff0000ff00ff00,0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private def s7_1 : State := [0x70707070707070000000000ffff,0x121212121212120000ff00000000,0x2424242424242400ff0000000000,0x38383838383838000000ffff0000,0x48484848484848000000000000ff,0x8181818181818100000000ff0000,0xc0c0c0c0c0c0c0ffffff00000000]
+private def layer7 : Layer := #[s7_0,s7_1]
+private def cert : Table := #[#[],#[],#[],#[],#[],#[],layer6,layer7]
+private theorem anchor6 : AtlasCut.Anchors 6 layer6 := by
+  intro s mem nd
+  simp only [layer6, Array.mem_def, List.mem_cons, List.not_mem_nil, or_false] at mem
+  rcases mem with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  · exact AtlasCut.leaf tail0 nd
+  · exact AtlasCut.leaf tail1 nd
+  · exact AtlasCut.leaf tail2 nd
+  · exact AtlasCut.leaf tail3 nd
+  · exact AtlasCut.leaf tail4 nd
+  · exact AtlasCut.leaf tail5 nd
+  · exact AtlasCut.leaf tail6 nd
+  · exact AtlasCut.leaf tail7 nd
+  · exact AtlasCut.leaf tail8 nd
+  · exact AtlasCut.leaf tail9 nd
+  · exact AtlasCut.leaf tail10 nd
+  · exact AtlasCut.leaf tail11 nd
+  · exact AtlasCut.leaf tail12 nd
+  · exact AtlasCut.leaf tail13 nd
+  · exact AtlasCut.leaf tail14 nd
+  · exact AtlasCut.leaf tail15 nd
+  · exact AtlasCut.leaf tail16 nd
+  · exact AtlasCut.leaf tail17 nd
+  · exact AtlasCut.leaf tail18 nd
+  · exact AtlasCut.leaf tail19 nd
+  · exact AtlasCut.leaf tail20 nd
+  · exact AtlasCut.leaf tail21 nd
+  · exact AtlasCut.leaf tail22 nd
+private theorem step7_0 : stateOK layer6 7 s7_0 = true := by decide +kernel
+private theorem step7_1 : stateOK layer6 7 s7_1 = true := by decide +kernel
+private theorem flags7 : layer7.all (stateOK layer6 7) = true := by
+  apply Array.all_eq_true_iff_forall_mem.mpr
+  intro s mem
+  simp only [layer7, Array.mem_def, List.mem_cons, List.not_mem_nil, or_false] at mem
+  rcases mem with rfl | rfl
+  · exact step7_0
+  · exact step7_1
+private theorem anchor7 : AtlasCut.Anchors 7 layer7 := AtlasCut.step anchor6 flags7
+theorem result : AtlasLower.lower 3502 8 :=
+  AtlasCut.sound (samp := sample 3502) (k := 7) (xs := cols) cert
+    (by decide +kernel) (by decide +kernel) (by decide +kernel) (by decide +kernel) anchor7
+
+end AtlasCutRow3502D6
