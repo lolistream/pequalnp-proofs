@@ -17,7 +17,7 @@ All eight files were independently checked in Lean 4.36.0. The lower-bound files
 
 A separate [5×5 result for mask 3195660](finite-graphs/mask-3195660) also allows NOT. An 11-gate shared circuit was verified in Lean. For size ≤10 the zero-NOT case has an upstream Lean proof of impossibility; the six positive-NOT profiles have an independent exhaustive computational replay, not a Lean proof.
 
-The [3×5 formula atlas](finite-graphs/formula-atlas) goes further for **trees**: it gives all 32,768 minimum tree sizes and a reconstructible witness for every mask, cross-checked by a second dynamic program without relabeling symmetry. Tree lower bounds alone are not lower bounds for circuits with shared wires.
+The [3×5 circuit atlas](finite-graphs/dag-atlas) gives an exact minimum and an explicit witness for **all 32,768 labeled relations**, allowing arbitrary sharing. The worst case is **9 gates**, needed by 7,770 masks. Every representative upper bound and one tight worst case passed Lean; two complete searches independently replay the entire numerical distribution. The separate [formula-tree atlas](finite-graphs/formula-atlas) gives the tree minima. Sharing saves a gate on 3,510 nonconstant masks and saves two gates on another 540.
 
 ## Search ranges: 3×3 Boolean matrix product
 
