@@ -7,9 +7,10 @@ jobs=${ATLAS_JOBS:-1}
 case ${1:-sharp} in
   sharp) groups=('RepSizePerm RepresentativeOrbitCoverage RepresentativeUpperBounds WorstCase' 'SharpBound');;
   selected) groups=('RepSizePerm RepresentativeUpperBounds WorstCase RepresentativeLowerBounds' 'SelectedOptima');;
-  full) groups=('RepSizePerm RepresentativeOrbitCoverage RepresentativeUpperBounds WorstCase RepresentativeLowerBounds' 'SelectedOptima')
-        while IFS= read -r level; do [[ -z $level ]] || groups+=("$level"); done < "$here/lower-certificates/build-order.txt";;
-  *) printf 'Usage: bash %s [sharp|selected|full]\n' "$0" >&2; exit 2;;
+  full|histogram) groups=('RepSizePerm RepresentativeOrbitCoverage RepresentativeUpperBounds WorstCase RepresentativeLowerBounds' 'SelectedOptima')
+        while IFS= read -r level; do [[ -z $level ]] || groups+=("$level"); done < "$here/lower-certificates/build-order.txt"
+        if [[ $1 == histogram ]]; then groups+=('HistogramCounting HistogramOrbits' 'HistogramFixers' 'LabeledHistogram'); fi;;
+  *) printf 'Usage: bash %s [sharp|selected|full|histogram]\n' "$0" >&2; exit 2;;
 esac
 work=$(mktemp -d)
 trap 'rm -rf -- "$work"' EXIT
