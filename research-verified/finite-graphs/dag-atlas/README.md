@@ -24,7 +24,8 @@ Compared with the [formula-tree atlas](../formula-atlas), sharing a computed wir
 
 - **Witnesses and coverage:** [`check.py`](check.py) evaluates every witness on all 15 inputs after each of the 720 row/column permutations. It checks that the orbits have the claimed sizes, are disjoint, and together cover every mask. Relabeling raw input wires preserves size in both directions (use the inverse permutation); fanout is unchanged. The table covers all masks, not only examples sampled from the project's queue.
 - **Lower bounds:** the [C++ checker](frontier.cc) and a [separate Python implementation](audit_lowers.py) searched for a smaller circuit for **every representative**, not only cases where the tree and circuit bounds differ. Neither trusts the supplied formula sizes when replaying the lower bounds. The full Python audit reported 190 classes, 40,338 input supports, 540,016 visited states, and zero counterexamples. A time-limited or partial C++ run does not pass the verifier.
-- **Lean:** [`RepresentativeUpperBounds.lean`](RepresentativeUpperBounds.lean) verifies all 190 representative gate lists against `PEqualNP.Represents.RepSizeAtMost` and their recorded sizes. [`WorstCase.lean`](WorstCase.lean) separately proves that mask **7549** has no circuit of size ≤8. Together the two files establish strictly more than sample testing for that extremal mask: it has minimum 9. The complete numerical distribution above is independently computation-checked; these two Lean files alone do not formalize all 190 lower bounds or orbit coverage. `WorstCase.lean` specializes the finite-word argument in upstream `PEqualNP.Outside.L_meta_5473`.
+- **Lean, universal bound:** [`SharpBound.lean`](SharpBound.lean) proves `PEqualNP.Rep35Atlas.sharp_uniform_bound`: for any natural `s`, `(∀ A : Fin 3 → Fin 5 → Bool, RepSizeAtMost A s) ↔ 9 ≤ s`. This is a theorem about **every labeled relation**, not just about the entries in a finite list. [`RepresentativeUpperBounds.lean`](RepresentativeUpperBounds.lean) certifies all 190 circuits. [`RepresentativeOrbitCoverage.lean`](RepresentativeOrbitCoverage.lean) proves that every Boolean matrix is a relabeling of some listed mask, using the 792 possible sorted multisets of column types. [`RepSizePerm.lean`](RepSizePerm.lean) proves that row and column permutations preserve the minimum size (for arbitrary dimensions). [`WorstCase.lean`](WorstCase.lean) proves the matching obstruction for mask **7549** by specializing the finite-word argument from upstream `PEqualNP.Outside.L_meta_5473`. The kernel-checked sharp theorem depends only on the standard Lean axioms `propext`, `Classical.choice`, and `Quot.sound`.
+- **Distinction:** the kernel theorem certifies that the worst-case minimum is nine. It does not count the 7,770 extremal labeled relations or by itself prove every individual lower bound; those facts are verified by the independent searches above.
 
 ## Why the exhaustive lower-bound search is complete
 
@@ -45,9 +46,11 @@ g++ -O3 -std=c++17 -ftrapv -D_GLIBCXX_ASSERTIONS frontier.cc -o "$work/frontier"
 python3 -I check.py --frontier "$work/frontier" --seconds 40
 ```
 
-For Lean, from the repository's `lean/` directory using the pinned Lean and Mathlib versions, first `lake build PEqualNP.Defs`, then:
+To reproduce the universal theorem, from the repository's `lean/` directory using the pinned Lean and Mathlib versions:
 
 ```bash
-lake env lean --stdin < ../research-verified/finite-graphs/dag-atlas/RepresentativeUpperBounds.lean
-lake env lean --stdin < ../research-verified/finite-graphs/dag-atlas/WorstCase.lean
+lake build PEqualNP.Defs
+bash ../research-verified/finite-graphs/dag-atlas/check-lean.sh
 ```
+
+The script compiles all five proof modules in a fresh temporary directory, without installing them into the project's Lake build. Allow several minutes for the finite `decide` checks. On success the last line is `Lean OK: SharpBound`.
