@@ -13,6 +13,8 @@ Input `(u,v)` has one set bit on each side. A bit at position `5*u+v` of the int
 
 Each of the four files was independently checked in Lean 4.36.0. The lower-bound files specialize the finite-word completeness argument and checker from upstream [`L_meta_5473.lean`](../lean/PEqualNP/Outside/L_meta_5473.lean), under the repository’s Apache-2.0 license. The two original tasks asked for the opposite inequalities; both were returned as `statement_seems_false`. These files are **not** PRs claiming those false statements.
 
+The [3×5 formula atlas](finite-graphs/formula-atlas) goes further for **trees**: it gives all 32,768 minimum tree sizes and a reconstructible witness for every mask, cross-checked by a second dynamic program without relabeling symmetry. Tree lower bounds alone are not lower bounds for circuits with shared wires.
+
 ## Search ranges: 3×3 Boolean matrix product
 
 - [Range 4: at most eleven ANDs, exactly one NOT](matrix-range4/README.md). A restriction reduces a hypothetical witness to two dot products on nine inputs. All five placements of NOT in the relaxed problem have checked UNSAT certificates. The desk acknowledged `exhausted` for range 4. This is not a Lean proof that no 44-gate circuit exists in every range.
