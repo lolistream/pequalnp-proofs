@@ -12,8 +12,11 @@ Input `(u,v)` has one set bit on each side. For a graph with `m` columns, bit `m
 | L-meta-20463 | 3×5 | 1091 | **5**, not 4 | [5-gate witness](finite-graphs/five-1091.lean) | [no circuit of size ≤4](finite-graphs/no-four-1091.lean) |
 | L-meta-20498 | 3×5 | 3239 | **6**, not 5 | [6-gate witness](finite-graphs/six-3239.lean) | [no circuit of size ≤5](finite-graphs/no-five-3239.lean) |
 | L-meta-20743 | 5×5 | 24608768 | **7**, not 6 | [7-gate witness](finite-graphs/seven-24608768.lean) | [no circuit of size ≤6](finite-graphs/no-six-24608768.lean) |
+| L-meta-21075 | 4×5 | 106399 | **10**, not 9 | [10-gate witness](finite-graphs/ten-106399.lean) | [no circuit of size ≤9](finite-graphs/no-nine-106399.lean) |
 
-All eight files were independently checked in Lean 4.36.0. The lower-bound files specialize the finite-word completeness argument and checker from upstream [`L_meta_5473.lean`](../lean/PEqualNP/Outside/L_meta_5473.lean), under the repository’s Apache-2.0 license. The four original tasks asked for the opposite inequalities; all were returned as `statement_seems_false`. These files are **not** PRs claiming those false statements.
+Each minimum in the table has both sides checked by the Lean 4.36.0 kernel. The lower-bound files specialize the finite-word completeness argument and checker from upstream [`L_meta_5473.lean`](../lean/PEqualNP/Outside/L_meta_5473.lean), under the repository’s Apache-2.0 license. The original tasks asked for the opposite inequalities. The results here refute those inequalities; they are **not** upstream PRs claiming to prove them.
+
+In the 4×5 example, deleting its all-true first row leaves the 3×5 mask 3324. The explicit 10-gate construction uses the first row bit directly and shares the `column 0 OR column 1` signal between the last two rows. The proof that nine gates cannot suffice covers **all** permitted circuits, not just circuits with this layout.
 
 A separate [5×5 result for mask 3195660](finite-graphs/mask-3195660) also allows NOT. An 11-gate shared circuit was verified in Lean. For size ≤10 the zero-NOT case has an upstream Lean proof of impossibility; the six positive-NOT profiles have an independent exhaustive computational replay, not a Lean proof.
 
