@@ -1,0 +1,16 @@
+import Case24992
+
+namespace Lower24992
+open TwoLit100268
+set_option maxRecDepth 16000
+set_option maxHeartbeats 8500000
+
+def sC0117 : List Sig := [(0x0, 0x1000400100040010004001000400), (0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x1e007801e007801e007801e0078), (0x3fff0003fff0000000, 0xe203880e203880e203880e20388), (0x3ffffffc00000000000000000, 0x36cddb376cddb376cddb376cddb3), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007)]
+theorem qC0117 : Impossible 7 1 sC0117 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC0545 : List Sig := [(0xfffc000fffc000, 0x29f3a7ce9f3a7ce9f3a7ce9f3a7c), (0x3fff0003fff0000000, 0x2f33bccef33bccef33bccef33bcc), (0xfffc00000000000000000, 0x3244c913244c913244c913244c91), (0x3fff000000000000000000000, 0x1489522548952254895225489522), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007)]
+theorem qC0545 : Impossible 7 1 sC0545 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+end Lower24992

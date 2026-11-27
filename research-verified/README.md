@@ -42,6 +42,8 @@ For `L-meta-23222` (mask `35895` on the same six wires), the exact minimum is al
 
 For `L-meta-24746` (mask `100268`), the exact minimum is **10 gates, not 9**. The [10-gate witness](two-lit-100268/ten-100268.lean) is verified on all 36 ordered inputs, and the [two-layer signed cut certificate](two-lit-100268/README.md) rules out all nine-gate circuits, with sharing and NOT gates allowed. Its kernel-checked axiom audit reports only `propext`, `Classical.choice` and `Quot.sound`.
 
+For `L-meta-24992` (mask `270549127`), the exact minimum is also **10 gates, not 9**. The posted unit was `L-meta-24992`; the desk has since closed it (not ours to submit). The [construction](two-lit-270549127/Ten24992.lean) uses ten gates, and the [signed cut certificate](two-lit-270549127/README.md) excludes all nine-gate circuits including NOT and shared wires. Its kernel axiom audit reports only `propext`, `Classical.choice` and `Quot.sound`.
+
 ## Search ranges: 3×3 Boolean matrix product
 
 - [Range 4: at most eleven ANDs, exactly one NOT](matrix-range4/README.md). A restriction reduces a hypothetical witness to two dot products on nine inputs. All five placements of NOT in the relaxed problem have checked UNSAT certificates. The desk acknowledged `exhausted` for range 4. This is not a Lean proof that no 44-gate circuit exists in every range.

@@ -1,0 +1,44 @@
+import Case24992
+
+namespace Lower24992
+open TwoLit100268
+set_option maxRecDepth 16000
+set_option maxHeartbeats 8500000
+
+def sC0778 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x1e007801e007801e007801e0078), (0x3fff0003fff0000000, 0x2f33bccef33bccef33bccef33bcc), (0xfffc00000000000000000, 0x3244c913244c913244c913244c91), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007), (0x3ffc000fffffffffffffffffffff, 0x2b76addab76addab76addab76add)]
+theorem qC0778 : Impossible 7 1 sC0778 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC0780 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x29f3a7ce9f3a7ce9f3a7ce9f3a7c), (0x3fff0003fff0000000, 0xe203880e203880e203880e20388), (0xfffc00000000000000000, 0x3244c913244c913244c913244c91), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007), (0x3ffc000fffffffffffffffffffff, 0x2b76addab76addab76addab76add)]
+theorem qC0780 : Impossible 7 1 sC0780 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC0818 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x1e007801e007801e007801e0078), (0x3fff0003fff0000000, 0x2f33bccef33bccef33bccef33bcc), (0x3fff000000000000000000000, 0x1489522548952254895225489522), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007), (0x3ffffff0003fffffffffffffffff, 0xdbb36ecdbb36ecdbb36ecdbb36e)]
+theorem qC0818 : Impossible 7 1 sC0818 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC0820 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x29f3a7ce9f3a7ce9f3a7ce9f3a7c), (0x3fff0003fff0000000, 0xe203880e203880e203880e20388), (0x3fff000000000000000000000, 0x1489522548952254895225489522), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007), (0x3ffffff0003fffffffffffffffff, 0xdbb36ecdbb36ecdbb36ecdbb36e)]
+theorem qC0820 : Impossible 7 1 sC0820 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC0983 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x29f3a7ce9f3a7ce9f3a7ce9f3a7c), (0x3fff0003fff0000000, 0xe203880e203880e203880e20388), (0xfffc00000000000000000, 0x3244c913244c913244c913244c91), (0x3fff000000000000000000000, 0x1489522548952254895225489522), (0x3ffc0000000000ffffffffffffff, 0x1fc07f01fc07f01fc07f01fc07f)]
+theorem qC0983 : Impossible 7 2 sC0983 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC0997 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x1e007801e007801e007801e0078), (0x3fff0003fff0000000, 0x2f33bccef33bccef33bccef33bcc), (0xfffc00000000000000000, 0x3244c913244c913244c913244c91), (0x3fff000000000000000000000, 0x1489522548952254895225489522), (0x3ffc0000003fff0003ffffffffff, 0xe3c38f0e3c38f0e3c38f0e3c38f)]
+theorem qC0997 : Impossible 7 2 sC0997 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC1004 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x1e007801e007801e007801e0078), (0x3fff0003fff0000000, 0xe203880e203880e203880e20388), (0xfffc00000000000000000, 0x3244c913244c913244c913244c91), (0x3fff000000000000000000000, 0x3d9bf66fd9bf66fd9bf66fd9bf66), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007), (0x3fffffffffc000fffc000fffffff, 0x31dfc77f1dfc77f1dfc77f1dfc77)]
+theorem qC1004 : Impossible 7 1 sC1004 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC1005 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x1e007801e007801e007801e0078), (0x3fff0003fff0000000, 0xe203880e203880e203880e20388), (0xfffc00000000000000000, 0x3244c913244c913244c913244c91), (0x3fff000000000000000000000, 0x3d9bf66fd9bf66fd9bf66fd9bf66), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007), (0x3fffffffffffff0003fff0003fff, 0x3e1ff87fe1ff87fe1ff87fe1ff87)]
+theorem qC1005 : Impossible 7 1 sC1005 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+def sC0949 : List Sig := [(0x0, 0x2913a44e913a44e913a44e913a44), (0xfffc000fffc000, 0x1e007801e007801e007801e0078), (0x3fff0003fff0000000, 0xe203880e203880e203880e20388), (0xfffc00000000000000000, 0x3244c913244c913244c913244c91), (0x3fff000000000000000000000, 0x1489522548952254895225489522), (0x3ffc00000000000003ffffffffff, 0x1c007001c007001c007001c007), (0x3ffc000fffc0000003ffffffffff, 0x325cc97325cc97325cc97325cc97)]
+theorem qC0949 : Impossible 8 2 sC0949 :=
+  exclude_search (by decide +kernel) (by decide +kernel)
+
+end Lower24992
